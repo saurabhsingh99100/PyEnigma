@@ -1,7 +1,8 @@
 # PyEnigma
+<img src="/img/enigma_icon.jpg" width="150" height="150">
 Enigma machine emulator written in python 3.8
 
-## -------- API ---------
+### -------- API ---------
 CLASS : "pyenigma"  
 
   - init(a, b, c)           : initialises the machine. a,b,c are positions of rotors which serve as **key**.
