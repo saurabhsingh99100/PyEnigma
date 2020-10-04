@@ -8,8 +8,6 @@ class pyenigma:
 		self.__Apos = a
 		self.__Bpos = b
 		self.__Cpos = c
-
-		self.__rot=[0,0,0]
 	
 		self.__rotorA = self.__offset(self.ROTOR_A, self.__Apos)
 		self.__rotorB = self.__offset(self.ROTOR_B, self.__Bpos)
