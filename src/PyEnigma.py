@@ -8,6 +8,8 @@ class pyenigma:
 		self.__Apos = a
 		self.__Bpos = b
 		self.__Cpos = c
+
+		self.__rot=[0,0,0]
 	
 		self.__rotorA = self.__offset(self.ROTOR_A, self.__Apos)
 		self.__rotorB = self.__offset(self.ROTOR_B, self.__Bpos)
@@ -47,6 +49,7 @@ class pyenigma:
 	def run(self, msg):
 		msg = msg.upper()
 		out = ""
+		i = 1
 
 		for l0 in msg:
 			if l0 == " ":
@@ -62,9 +65,17 @@ class pyenigma:
 
 				out+=l7
 
+
 				self.__rotorA = self.__spin(self.__rotorA)
-				self.__rotorB = self.__spin(self.__rotorB)
-				self.__rotorC = self.__spin(self.__rotorC)
+
+				if i%26 == 0:
+					self.__rotorB = self.__spin(self.__rotorB)
+
+				if i%676 == 0:
+					self.__rotorC = self.__spin(self.__rotorC)
+
+				i+=1
+
 		
 		return out
 	
